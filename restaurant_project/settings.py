@@ -6,8 +6,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'cambia-esta-secret-key'
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']  # en Railway se ajusta si quieres restringir
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'localhost',
+    'web-production-f1f51.up.railway.app', 
+    '.up.railway.app',                   
+]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://web-production-f1f51.up.railway.app',
+    'https://*.up.railway.app', 
+]
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
